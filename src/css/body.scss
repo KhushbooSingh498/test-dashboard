@@ -1,0 +1,81 @@
+.body{
+    background-color: $primary-color;
+    @media screen and (min-width: $screen-lg) {
+        width: 80%;
+    }
+}
+
+//value-bar
+
+.value-bar{
+    background-color: $white;
+    margin-top: 3rem;
+    padding: 1.125rem 1.125rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.value-list{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.value{
+    padding: 0 1.5rem;
+    &.total{
+        padding-left: 0;
+        border-right: 1px solid $primary-color;
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .amount{
+        font-size: 1.25rem;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        @media screen and (min-width: $screen-md) {
+            font-size: 1.5rem;
+
+        }
+
+        &.btc{
+            margin-right: 10px;
+        }
+    }
+
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    .primary-btn{
+        &:first-child{
+            margin-right: 10px;
+        }
+    }
+}
+
+.value-tag{
+    display: inline-block;
+    font-size: 10px;
+    line-height: 1;
+    padding: 8px 12px;
+    background-color: $primary-color;
+    border-radius: 13px;
+    color: $light-grey;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-left: 6px;
+}
+
+.grid-layout{
+    margin-top: 1rem;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}

@@ -1,0 +1,53 @@
+.recent-transactions{
+    background-color: $white;
+    border-radius: 1rem;
+    padding: 1.25rem;
+}
+.transaction-list {
+    margin-left: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.list-item{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.125rem 0;
+    border-bottom: 1px solid $primary-color;
+
+    &:last-child{
+        border-bottom: none;
+    }
+    
+    .bullets{
+        position: absolute;
+        left: -2.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $primary-color;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+}
+
+.transaction{
+    width: 50%;
+    font-size: 1.125rem;
+    line-height: 1.2;
+
+}
+.transac-value{
+    text-align: right;
+    width: 50%;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.grey-text{
+    font-size: 0.75rem;
+    color: $light-grey;
+    line-height: 1.6;
+    display: block;
+    font-weight: 400;
+}

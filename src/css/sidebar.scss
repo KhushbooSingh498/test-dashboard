@@ -1,0 +1,45 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.sidebar{
+    @media screen and (min-width: $screen-lg) {
+        flex-direction: column;
+        justify-content: space-between;
+        display: flex;
+        width: 20%;
+        padding: 80px 15px 40px;
+        max-height: 100vh;
+        position: sticky;
+        top: 0;
+
+    }
+
+    &__top{
+
+    }
+}
+
+.nav-item{
+    display: block;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: $light-grey;
+
+    @media screen and (min-width: $screen-lg) {
+        font-size: 1.25rem;
+        padding: 1rem 1.75rem;
+        border-radius: 10px;
+    }
+    &:active{
+        color: $light-grey;
+
+    }
+    &.active{
+        background-color: $primary-color;
+        color: $black;
+    }
+}
