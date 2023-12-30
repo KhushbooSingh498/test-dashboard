@@ -42,7 +42,16 @@ ul,li{
         font-size: 2rem;
     }
 }
+.title{
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: capitalize;
 
+    @media screen and (min-width: $screen-md) {
+        font-size: 2.5rem;
+    }
+}
 .sub-subtitle{
     font-size: 1rem;
     display: block;
@@ -75,6 +84,10 @@ ul,li{
     box-sizing: border-box;
     outline: none;
 
+    i, svg{
+        margin-right: 5px;
+    }
+
     &:hover{
         color: $secondary-color;
         background-color: $white;
@@ -83,5 +96,54 @@ ul,li{
     &.full{
         width: 100%;
         color: $black ;
+    }
+}
+.grey-btn{
+    display: block;
+    border: none;
+    background-color: $primary-color;
+    color: $black;
+    padding: 10px 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid $primary-color;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    width: 100%;
+    &:hover{
+        background-color: $white;
+    }
+}
+
+.small-text{
+    color: $light-grey;
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.status-tag{
+    display: inline-block;
+    font-weight: 400;
+    color: $white;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 30px;
+
+    &.grey{
+        background-color: $grey;
+    }
+    &.yellow{
+        background-color: $yellow;
+    }
+    &.green{
+        background-color: $green;
+    }
+    &.red{
+        background-color: $red;
     }
 }

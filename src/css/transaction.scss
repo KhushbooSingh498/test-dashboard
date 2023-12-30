@@ -1,0 +1,103 @@
+.transactions{
+    margin: 3rem 0;
+}
+.export-btn{
+    text-align: right;
+}
+.transaction-table{
+    background-color: $white;
+    overflow: hidden;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    overflow: hidden;
+    overflow-x: scroll;
+    @media screen and (min-width: $screen-lg) {
+        overflow-x: clip;
+    }
+}
+.transaction-toll{
+    padding: 1rem 1rem 0;
+    border-bottom: 1px solid $mid-grey;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media screen and (min-width: $screen-lg) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+.toll-btns{
+    display: flex;
+    justify-content: flex-start;
+}
+.counts{
+    position: relative;
+    padding: 0 1rem 1.25rem;
+    font-size: 1rem;
+    color: $light-grey;
+    font-weight: 500;
+    margin-right: 2px;
+    &.active{
+        color: $black;
+
+        &::after{
+            content: '';
+            position: absolute;
+            background-color: $purple;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+        }
+    }
+    .value-tag{
+        font-size: 1rem;
+    }
+}
+.search-filter{
+    display: flex;
+    align-items: center;
+
+    input[type=text]{
+        border: none;
+        padding: 10px;
+    }
+    input[type=text]:focus-within, input[type=text]:focus, input[type=text]:focus-visible{
+        border: none;
+        outline: none;
+    }
+
+    i, svg{
+        color: $light-grey;
+    }
+}
+table{
+    width: 100%;
+    border-collapse: collapse ;
+
+    tr{
+        border-bottom:1px solid $mid-grey ;
+
+        &:last-child{
+            border-bottom:none ;
+            
+        }
+    }
+    
+    th,td{
+        text-align: left;
+        padding:1.25rem 1rem;
+    }
+    th{
+        color: $light-grey;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    td{
+        font-weight: 500;
+
+    }
+}

@@ -1,7 +1,10 @@
 .body{
     background-color: $primary-color;
+    width: 100%;
+    min-height: 100vh;
     @media screen and (min-width: $screen-lg) {
         width: 80%;
+        margin-left: calc(100vw - 80%);
     }
 }
 
@@ -21,13 +24,30 @@
 .value-list{
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @media screen and (min-width: $screen-md) {
+        width: auto;
+    }
 }
 
 .value{
-    padding: 0 1.5rem;
+    padding: 1.125rem 0;
+    width: 100%;
+
+    @media screen and (min-width: $screen-md) {
+        padding: 0 1.125rem;
+        width: auto;
+    }
     &.total{
         padding-left: 0;
-        border-right: 1px solid $primary-color;
+        border-bottom: 1px solid $primary-color;
+        @media screen and (min-width: $screen-md) {
+            border-right: 1px solid $primary-color;
+            border-bottom: none;
+            
+        }
     }
     ul{
         display: flex;
@@ -35,7 +55,7 @@
     }
 
     .amount{
-        font-size: 1.25rem;
+        font-size: 1rem;
         display: flex;
         align-items: center;
         font-weight: 500;
@@ -53,7 +73,17 @@
 .buttons{
     display: flex;
     justify-content: space-between;
+    margin-top: 1rem;
+    width: 100%;
+    
+    @media screen and (min-width: $screen-xl) {
+        width: auto;
+    }
     .primary-btn{
+        width: calc(50% - 10px);
+        @media screen and (min-width: $screen-xl) {
+            width: auto;
+        }
         &:first-child{
             margin-right: 10px;
         }
@@ -74,8 +104,12 @@
 }
 
 .grid-layout{
-    margin-top: 1rem;
+    margin: 1rem 0 2rem;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    @media screen and (min-width: $screen-md) {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
 }

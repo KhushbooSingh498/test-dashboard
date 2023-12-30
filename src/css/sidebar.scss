@@ -4,19 +4,20 @@
     align-items: flex-start;
 }
 .sidebar{
+    background-color: $white;
+    width: 100vw;
+    display: none;
     @media screen and (min-width: $screen-lg) {
         flex-direction: column;
         justify-content: space-between;
         display: flex;
         width: 20%;
         padding: 80px 15px 40px;
-        max-height: 100vh;
-        position: sticky;
+        // height: 100vh;
+        position: fixed;
         top: 0;
-
-    }
-
-    &__top{
+        left: 0;
+        bottom: 0;
 
     }
 }
@@ -34,6 +35,10 @@
         padding: 1rem 1.75rem;
         border-radius: 10px;
     }
+    i,svg{
+        margin-right: 8px;
+        font-size: 1rem;
+    }
     &:active{
         color: $light-grey;
 
@@ -41,5 +46,8 @@
     &.active{
         background-color: $primary-color;
         color: $black;
+        i, svg{
+            color: $secondary-color;
+        }
     }
 }

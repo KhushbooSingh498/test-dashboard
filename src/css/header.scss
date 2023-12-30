@@ -28,3 +28,16 @@
         }
     }
 }
+
+.menu-bar{
+    border: none;
+    outline: none;
+    background-color: unset;
+    color: $secondary-color;
+    font-size: 1.75rem;
+    display: inline-block;
+    cursor: pointer;
+    @media screen and (min-width: $screen-lg) {
+        display: none;
+    }
+}

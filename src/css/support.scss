@@ -1,0 +1,139 @@
+.support{
+    &__inner{
+        margin: 2rem 0;
+        @media screen and (min-width: $screen-md) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+    }
+}
+.support-content{
+    width: 100%;
+    margin-bottom: 4rem;
+    @media screen and (min-width: $screen-md) {
+        width: 40%;
+    }
+    .contact-icon{
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        margin-bottom: 1rem;
+        @media screen and (min-width: $screen-md) {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+    }
+    p{
+        color: $grey;
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+}
+
+.support-form{
+    width: 100%;
+    background-color: $white;
+    padding: 1rem 1.25rem;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    @media screen and (min-width: $screen-md) {
+        width: 48%;
+        padding: 1.25rem 2rem;
+
+    }
+
+    
+}
+.notice{
+    font-weight: 500; 
+    margin-bottom: 2rem;
+ }
+.data-row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .form-data{
+        width: 100%;
+        @media screen and (min-width: $screen-sm) {
+            width: 48%;
+        }
+    }
+}
+.form-data{
+    margin-bottom: 1rem;
+
+    @media screen and (min-width: $screen-sm) {
+        margin-bottom: 1.5rem;
+    }
+}
+label{
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+input[type=text],
+input[type=email],
+input[type=checkbox],
+textarea{
+    width: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid $primary-color;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: $font;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus, input[type=text]:focus-visible,
+input[type=email]:focus-visible,
+textarea:focus-visible{
+    // border: 1px solid $light-grey;
+    outline: 1px solid $light-grey;
+}
+textarea{
+    resize: vertical;
+    height: 5rem;
+    @media screen and (min-width: $screen-sm) {
+        height: 7rem;
+    }
+}
+.form-check{
+    // display: flex;
+    // align-items: center;
+    input[type=checkbox]{
+        width: auto;
+    }
+}
+.terms{
+    color: $secondary-color;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.submit-btn{
+    font-weight: 600;
+    margin: 2rem 0 0.5rem;
+
+    &:disabled{
+        cursor: not-allowed;
+        color: $light-grey;
+        background-color: rgba($grey, 0.2);
+        border: rgba($grey, 0.2);
+
+    }
+}
+
+.chat-note{
+    margin-bottom: 3rem;
+    p{
+        color: $grey;
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+}
+

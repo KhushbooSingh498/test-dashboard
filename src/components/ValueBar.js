@@ -20,8 +20,8 @@ const ValueBar = () =>{
                 </div>
             </div>
             <div className="buttons">
-                <button className="primary-btn">Deposit</button>
-                <button className="primary-btn">withdraw</button>
+                <button className="primary-btn"><i class="fa-solid fa-arrow-down"></i> Deposit</button>
+                <button className="primary-btn"><i class="fa-solid fa-arrow-up"></i> withdraw</button>
 
             </div>
         </div>

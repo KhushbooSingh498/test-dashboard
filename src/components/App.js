@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Sidebar from './Sidebar';
 import Body from './Body';
+import Header from './Header';
 import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom';
 import Transactions from './Transactions';
 import Support from './Support';
@@ -12,6 +13,7 @@ const AppLayout = () => {
         <div className='main'>
             <Sidebar />
             <div className='body'>
+                <Header />
                 <Outlet />
             </div>
         </div>
