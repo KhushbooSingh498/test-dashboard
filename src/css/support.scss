@@ -1,6 +1,7 @@
 .support{
+    padding: 6rem 0 2rem;
+
     &__inner{
-        margin: 2rem 0;
         @media screen and (min-width: $screen-md) {
             display: flex;
             justify-content: space-between;

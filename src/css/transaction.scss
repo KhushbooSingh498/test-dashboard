@@ -1,5 +1,5 @@
 .transactions{
-    margin: 3rem 0;
+    margin: 5rem 0;
 }
 .export-btn{
     text-align: right;
@@ -22,11 +22,9 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    min-width: 900px;
     @media screen and (min-width: $screen-lg) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
+    min-width: 100%;
     }
 }
 .toll-btns{
@@ -77,6 +75,11 @@
 table{
     width: 100%;
     border-collapse: collapse ;
+    min-width: 930px;
+
+    @media screen and (min-width: $screen-lg) {
+        min-width: 100%;
+    }
 
     tr{
         border-bottom:1px solid $mid-grey ;
@@ -99,5 +102,26 @@ table{
     td{
         font-weight: 500;
 
+    }
+}
+.status-tag{
+    display: inline-block;
+    font-weight: 400;
+    color: $white;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 30px;
+
+    &.pending{
+        background-color: $grey;
+    }
+    &.processing{   
+        background-color: $yellow;
+    }
+    &.completed{
+        background-color: $green;
+    }
+    &.cancelled{
+        background-color: $red;
     }
 }

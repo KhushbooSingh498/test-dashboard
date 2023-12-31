@@ -1,19 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import Sidebar from './Sidebar';
 import Body from './Body';
 import Header from './Header';
+import { useState } from 'react';
 import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom';
 import Transactions from './Transactions';
 import Support from './Support';
 import '../css/App.scss';
 
 const AppLayout = () => {
+    const [isSidebarOpen, setSidebarOpen] =useState(false);
+
+    
     return (
         <div className='main'>
-            <Sidebar />
+            <Sidebar isSidebarOpen={isSidebarOpen}/>
             <div className='body'>
-                <Header />
+                <Header setSidebarOpen={setSidebarOpen}/>
                 <Outlet />
             </div>
         </div>

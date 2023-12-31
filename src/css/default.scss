@@ -126,24 +126,3 @@ ul,li{
     font-size: 14px;
     line-height: 1.4;
 }
-.status-tag{
-    display: inline-block;
-    font-weight: 400;
-    color: $white;
-    font-size: 14px;
-    padding: 6px 10px;
-    border-radius: 30px;
-
-    &.grey{
-        background-color: $grey;
-    }
-    &.yellow{
-        background-color: $yellow;
-    }
-    &.green{
-        background-color: $green;
-    }
-    &.red{
-        background-color: $red;
-    }
-}

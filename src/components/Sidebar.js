@@ -1,16 +1,22 @@
 import { NavLink } from "react-router-dom";
-import GridIcon from '../img/grid.svg'
+import { useState } from 'react';
 
-const Sidebar = () =>{
+
+const Sidebar = ({isSidebarOpen}) =>{
+    const [isClose, setClose] = useState(isSidebarOpen);
+    // const handleClose = ()=>{
+    //     setClose((prev)=>!prev);
+    // }
     return (
-        <div className="sidebar">
+        <div className={isSidebarOpen ? 'sidebar active' : 'sidebar'}>
+            {/* <button onClick={handleClose}><i className="fa-solid fa-xmark"></i></button> */}
             <div className="sidebar__top">
             <NavLink to='/' className='nav-item'>
             <i class="fa-brands fa-windows"></i> Dashboard</NavLink>
             <NavLink to='/transaction' className='nav-item'><i class="fa-solid fa-right-left"></i>Transaction</NavLink>
             </div>
 
-            <NavLink to='/support' className='nav-item support'><i class="fa-solid fa-headset"></i> Support</NavLink>
+            <NavLink to='/support' className='nav-item support-btn'><i class="fa-solid fa-headset"></i> Support</NavLink>
 
         </div>
     )

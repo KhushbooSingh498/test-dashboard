@@ -2,15 +2,28 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    position: relative;
+    overflow-x: clip;
 }
 .sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: $white;
-    width: 100vw;
-    display: none;
+    width: 40vw;
+    position: fixed;
+    z-index: 1;
+    padding: 20px 15px 40px;
+    top: 50px;
+    bottom: 0;
+    left: calc(-40vw - 30px);
+    transition: all 0.3s ease;
+    @media screen and (min-width: $screen-md) {
+        top: 60px;
+    }
+
     @media screen and (min-width: $screen-lg) {
-        flex-direction: column;
-        justify-content: space-between;
-        display: flex;
+        
         width: 20%;
         padding: 80px 15px 40px;
         // height: 100vh;
@@ -20,11 +33,17 @@
         bottom: 0;
 
     }
+
+    &.active{
+        left: 0;
+    }
 }
 
 .nav-item{
     display: block;
     font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
     line-height: 1;
     font-weight: 500;
     text-transform: capitalize;
@@ -34,6 +53,7 @@
         font-size: 1.25rem;
         padding: 1rem 1.75rem;
         border-radius: 10px;
+
     }
     i,svg{
         margin-right: 8px;

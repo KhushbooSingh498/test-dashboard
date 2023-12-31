@@ -1,7 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Data } from "../utils/Data";
 
-const Transactions = () =>{
+
+const Transactions = () => {
     const [inputText, setInputText] = useState("");
 
     return (
@@ -20,7 +22,7 @@ const Transactions = () =>{
                         </div>
                         <div className="search-filter">
                             <i className="fa-solid fa-magnifying-glass"></i>
-                            <input type="text" value={inputText} onChange={(e)=>{setInputText(e.target.value)}} placeholder="Search by ID or destination"></input>
+                            <input type="text" value={inputText} onChange={(e) => { setInputText(e.target.value) }} placeholder="Search by ID or destination"></input>
                         </div>
                     </div>
 
@@ -33,16 +35,23 @@ const Transactions = () =>{
                             <th>Status</th>
 
                         </tr>
-                        <tr>
-                            <td>HD82NA2H</td>
-                            <td>2022-06-09 <span className="small-text time">07:06 PM</span></td>
-                            <td>INR Deposit
-                            <span className="small-text type">E-Transfer</span>
-                            </td>
-                            <td>+ ₹81,123.10</td>
-                            <td><span className="status-tag grey">Pending</span></td>
+                        {
+                            Data.map((item, index) => {
+                                return (
+                                    <tr>
+                                        <td>{item.id}</td>
+                                        <td>{item.date} <span className="small-text time">{item.time}</span></td>
+                                        <td>{item.transfer}
+                                            <span className="small-text type">{item.type}</span>
+                                        </td>
+                                        <td>{item.amount}</td>
+                                        <td><span className={`status-tag ${item.status}`}>{item.status}</span></td>
 
-                        </tr>
+                                    </tr>
+                                )
+                            })
+                        }
+
                     </table>
                 </div>
             </div>
