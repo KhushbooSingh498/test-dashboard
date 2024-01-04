@@ -4,12 +4,12 @@
   "description": "This is test dashboard",
   "main": "App.js",
   "scripts": {
-    
+    "predploy":" npm run build",
+    "deploy": "gh-pages -d build",
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "test": "zest",
-    "predploy":" npm run build",
-    "deploy": "gh-pages -d build"
+    "test": "zest"
+    
   },
   "repository": {
     "type": "git",
