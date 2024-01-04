@@ -11,7 +11,7 @@ const Support = () =>{
                 <div className="support__inner">
                     <div className="support-content">
                         <span className="contact-icon">
-                            <img src={Icon}/>
+                            <img src={Icon} alt="icon"/>
                         </span>
                         <h2 className="title">Contact us</h2>
                         <p>Have a question or just want to know more? Feel free to reach out to us.</p>

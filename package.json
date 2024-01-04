@@ -4,9 +4,12 @@
   "description": "This is test dashboard",
   "main": "App.js",
   "scripts": {
+    
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "test": "zest"
+    "test": "zest",
+    "predploy":" npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -20,6 +23,7 @@
   "homepage": "https://github.com/KhushbooSingh498/test-dashboard#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.10.3",
+    "gh-pages": "^6.1.1",
     "parcel": "^2.10.3",
     "process": "^0.11.10"
   },
